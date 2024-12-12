@@ -1,0 +1,11 @@
+[Unit]
+Description=Start monitoring
+After=boot-complete.target 
+
+[Service]
+ExecStart=/usr/bin/demoskript.sh
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
